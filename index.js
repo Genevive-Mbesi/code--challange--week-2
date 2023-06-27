@@ -23,11 +23,10 @@ function renderOneCharacter(animal){
     </div>
     
     `
-    // Add event listener to the "Voted" button
+// Add event listener to the "Voted" button
+
   const voteButton = myList.querySelector('.vote');
   voteButton.addEventListener('click', () => handleVoteClick(animal.id));
-
-
 
 
 //Add animal to DOM
@@ -35,9 +34,8 @@ function renderOneCharacter(animal){
     document.querySelector('#characters-list').appendChild(myList)
 
     
-
-    
 }
+
 
 // Vote button click handler
 function handleVoteClick(animalId) {
