@@ -5,9 +5,9 @@ function getData() {
       .then(animalData => animalData.forEach(animal => renderOneCharacter(animal)))
   }
   
-  // DOM render function
+// DOM render function
   function renderOneCharacter(animal) {
-    // Build animal
+  // Build animal
     let myList = document.createElement('li');
     myList.className = 'myList';
     myList.innerHTML = `
@@ -20,20 +20,20 @@ function getData() {
         </div>
       </div>`;
   
-    // Add event listener to toggle animal details
+  // Add event listener to animal details
     const animalName = myList.querySelector('.animal');
     animalName.addEventListener('click', function () {
       const animalDetails = animalName.nextElementSibling;
       animalDetails.style.display = animalDetails.style.display === 'block' ? 'none' : 'block';
     });
   
-    // Add event listener to the "Voted" button
+  // Add event listener to the "Voted" button
     const voteButton = myList.querySelector('.vote');
     voteButton.addEventListener('click', function () {
       handleVoteClick(animal.id);
     });
   
-    // Add animal to DOM
+  // Add animal to DOM
     const charactersList = document.querySelector('#characters-list');
     charactersList.appendChild(myList);
   }
